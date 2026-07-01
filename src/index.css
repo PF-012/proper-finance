@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Times New Roman", Times, serif;
+  --font-serif: "Times New Roman", Times, serif;
+  --font-mono: "Times New Roman", Times, serif;
+  --color-brand-blue: #0A3D91;
+  --color-brand-light: #F0F4F8;
+  --color-brand-dark: #051C42;
+
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-gray-800 bg-white;
+}
+
+/* Google Translate specific styling */
+.goog-te-gadget {
+  font-family: inherit !important;
+  color: transparent !important;
+  font-size: 0 !important;
+}
+.goog-te-gadget .goog-te-combo {
+  color: #333 !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin: 0 !important;
+  height: 24px;
+}
+.goog-te-gadget span {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+.skiptranslate iframe {
+  display: none !important;
+}

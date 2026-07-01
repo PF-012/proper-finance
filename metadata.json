@@ -1,0 +1,6 @@
+{
+  "name": "Proper Finance",
+  "description": "Financial and Consultation Services website for Proper Finance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
