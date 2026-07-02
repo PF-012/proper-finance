@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import logoImage from '../assets/logo.png';
-import tridentLogo from '../assets/Trident_Logo.jpg';
-import courseraLogo from '../assets/Coursera.png';
-import bcgLogo from '../assets/certifications/bcg.png';
-import mckinseyLogo from '../assets/certifications/mckinsey.png';
-import pwcLogo from '../assets/certifications/pwc.png';
-import oberoiLogo from '../assets/certifications/oberoi.jpg';
-import vedicLogo from '../assets/certifications/vedic.png';
+
+const logoImage = '/logo.png.jpeg';
+const tridentLogo = '/Trident%20Logo.png';
+const courseraLogo = '/Coursera.png';
+const bcgLogo = '/certifications/bcg.png';
+const mckinseyLogo = '/certifications/mckinsey.png';
+const pwcLogo = '/certifications/pwc.png';
+const oberoiLogo = '/certifications/oberoi.jpg';
+const vedicLogo = '/certifications/vedic.png';
 
 export default function About() {
   const [showMore, setShowMore] = useState(false);

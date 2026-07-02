@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Search } from 'lucide-react';
-import logoImage from '../assets/logo.png';
+
+const logoImage = '/logo.png.jpeg';
 
 const searchIndex = [
   { title: 'Home', type: 'Section', href: '#home' },
