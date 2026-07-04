@@ -5,11 +5,8 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-[450px] h-[65vh] md:h-screen md:min-h-[800px] flex items-center justify-start overflow-hidden pt-20 md:pt-32">
       {/* Background Image with Overlay */}
-      <motion.div 
-        initial={{ scale: 1 }}
-        animate={{ scale: 1.1 }}
-        transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-        className="absolute inset-0 z-0 bg-cover bg-[center_top_20%] md:bg-center bg-no-repeat will-change-transform transform-gpu"
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-[center_top_20%] md:bg-center bg-no-repeat"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop")' }}
       />
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -47,3 +44,4 @@ export default function Hero() {
     </section>
   );
 }
+
