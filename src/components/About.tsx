@@ -27,7 +27,7 @@ export default function About() {
           >
             <div className="aspect-[4/5] relative max-w-md mx-auto">
               <img 
-                src={logoImage} 
+                src="/proper-finance-logo.png"  
                 alt="Proper Finance Logo" 
                 className="object-contain w-full h-full shadow-2xl p-8 bg-white border border-gray-100 rounded-lg"
               />
