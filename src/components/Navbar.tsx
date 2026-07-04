@@ -1,8 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Search } from 'lucide-react';
-
-const logoImage = '/logo.png.jpeg';
-
 const searchIndex = [
   { title: 'Home', type: 'Section', href: '#home' },
   { title: 'AI Impact', type: 'Section', href: '#ai-impact' },
@@ -93,11 +90,11 @@ export default function Navbar() {
         isScrolled ? 'top-0 shadow-md' : 'top-0 border-b border-gray-100'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 w-full">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            <a href="#home" className="flex items-center gap-2 group">
-              <img src={logoImage} alt="Proper Finance Logo" className="h-12 md:h-16 w-12 md:w-16 object-contain rounded-full" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0 w-full">
+        <div className="flex justify-between items-center h-16 md:h-20">
+          <div className="flex items-center relative z-10">
+            <a href="#home" className="flex items-center group relative w-16 md:w-24">
+              <img src="/pfc-logo.png" alt="Proper Finance Logo" className="absolute top-1/2 left-0 -translate-y-1/2 h-20 md:h-28 w-20 md:w-28 object-contain rounded-full" />
             </a>
           </div>
           
