@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://properfinance.netlify.app/sitemap.xml
+Sitemap: https://properfinance.vercel.app/sitemap.xml
