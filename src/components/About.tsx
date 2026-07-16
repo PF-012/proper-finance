@@ -108,7 +108,7 @@ export default function About() {
                       ))}
                    </div>
                 </div>
-                <p className="text-[10.5px] text-gray-400 mt-4 text-center leading-tight">
+                <p className="text-[10px] text-gray-400 mt-4 text-center leading-tight">
                   * Note: Proper Finance Consultancy is not partnered with or officially affiliated with these companies. We are independently certified by or have worked with some of them.
                 </p>
               </div>
@@ -117,4 +117,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  );
+    );
+}
