@@ -104,10 +104,13 @@ export default function About() {
                           <img src={vedicLogo} alt="Vedic Yog Peeth" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
                           <img src={courseraLogo} alt="Coursera" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
                           <img src={tridentLogo} alt="Trident" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
-                        </div>
+                       </div>
                       ))}
                    </div>
                 </div>
+                <p className="text-[10.5px] text-gray-400 mt-4 text-center leading-tight">
+                  * Note: Proper Finance Consultancy is not partnered with or officially affiliated with these companies. We are independently certified by or have worked with some of them.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -115,4 +118,3 @@ export default function About() {
       </div>
     </section>
   );
-}
