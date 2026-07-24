@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Star, X } from 'lucide-react';
+import { Star, X, Send, Edit2, Trash2 } from 'lucide-react';
 
-const reviews = [
+const initialReviews = [
   {
     id: 1,
     name: "Piyush Kumar Singh",
@@ -63,6 +63,47 @@ const reviews = [
 
 export default function Reviews() {
   const [showAllReviews, setShowAllReviews] = useState(false);
+  const [reviews, setReviews] = useState(initialReviews);
+  
+  const [newReviewName, setNewReviewName] = useState('');
+  const [newReviewRole, setNewReviewRole] = useState('');
+  const [newReviewContent, setNewReviewContent] = useState('');
+
+  const [editingReviewId, setEditingReviewId] = useState<number | null>(null);
+  const [editState, setEditState] = useState({ name: '', role: '', content: '' });
+
+  const handleSubmitReview = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newReviewName.trim() || !newReviewContent.trim()) return;
+
+    const newReview = {
+      id: Date.now(),
+      name: newReviewName,
+      role: newReviewRole || "Client",
+      content: newReviewContent,
+      rating: 5, // Default to 5 stars for now
+      isEditable: true,
+    };
+
+    setReviews([newReview, ...reviews]);
+    setNewReviewName('');
+    setNewReviewRole('');
+    setNewReviewContent('');
+  };
+
+  const handleEditClick = (review: any) => {
+    setEditingReviewId(review.id);
+    setEditState({ name: review.name, role: review.role, content: review.content });
+  };
+
+  const handleSaveEdit = () => {
+    setReviews(reviews.map(r => r.id === editingReviewId ? { ...r, ...editState } : r));
+    setEditingReviewId(null);
+  };
+
+  const handleDeleteClick = (id: number) => {
+    setReviews(reviews.filter(r => r.id !== id));
+  };
 
   return (
     <section id="reviews" className="py-24 bg-gray-50 border-t border-gray-100">
@@ -78,29 +119,107 @@ export default function Reviews() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.slice(0, 3).map((review, index) => (
-            <motion.div
-              key={review.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow"
-            >
-              <div className="flex gap-1 mb-6 text-[#F59E0B]">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-8 leading-relaxed italic">
-                "{review.content}"
-              </p>
+          {reviews.slice(0, 3).map((review, index) => {
+            if (editingReviewId === review.id) {
+              return (
+                <div key={review.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col h-full space-y-3">
+                  <input value={editState.name} onChange={(e) => setEditState({ ...editState, name: e.target.value })} className="w-full px-3 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Name" />
+                  <input value={editState.role} onChange={(e) => setEditState({ ...editState, role: e.target.value })} className="w-full px-3 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Location / Designation" />
+                  <textarea value={editState.content} onChange={(e) => setEditState({ ...editState, content: e.target.value })} className="w-full px-3 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue outline-none flex-1 resize-none" rows={4} placeholder="Review" />
+                  <div className="flex gap-2 justify-end mt-4">
+                    <button onClick={() => setEditingReviewId(null)} className="px-4 py-2 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-md transition-colors">Cancel</button>
+                    <button onClick={handleSaveEdit} className="px-4 py-2 text-sm bg-brand-blue hover:bg-blue-600 text-white rounded-md transition-colors">Save</button>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <motion.div
+                key={review.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.6 }}
+                className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow flex flex-col"
+              >
+                <div className="flex justify-between items-start mb-6">
+                  <div className="flex gap-1 text-[#F59E0B]">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-current" />
+                    ))}
+                  </div>
+                  {/* @ts-ignore */}
+                  {review.isEditable && (
+                    <div className="flex gap-2">
+                      <button onClick={() => handleEditClick(review)} className="text-gray-400 hover:text-brand-blue transition-colors">
+                        <Edit2 className="w-4 h-4" />
+                      </button>
+                      <button onClick={() => handleDeleteClick(review.id)} className="text-gray-400 hover:text-red-500 transition-colors">
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+                <p className="text-gray-600 mb-8 leading-relaxed italic flex-1">
+                  "{review.content}"
+                </p>
+                <div>
+                  <h4 className="font-bold text-brand-dark text-lg">{review.name}</h4>
+                  <p className="text-sm text-gray-500">{review.role}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+        
+        {/* Review Submission Form */}
+        <div className="max-w-2xl mx-auto mt-20 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+          <h3 className="text-2xl font-bold text-brand-dark mb-6 font-serif text-center">Share Your Experience</h3>
+          <form onSubmit={handleSubmitReview} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h4 className="font-bold text-brand-dark text-lg">{review.name}</h4>
-                <p className="text-sm text-gray-500">{review.role}</p>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
+                <input 
+                  type="text" 
+                  id="name"
+                  required
+                  value={newReviewName}
+                  onChange={(e) => setNewReviewName(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
+                  placeholder="John Doe"
+                />
               </div>
-            </motion.div>
-          ))}
+              <div>
+                <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">Location / Designation</label>
+                <input 
+                  type="text" 
+                  id="role"
+                  value={newReviewRole}
+                  onChange={(e) => setNewReviewRole(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
+                  placeholder="e.g. New York or CEO"
+                />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">Your Review *</label>
+              <textarea 
+                id="content"
+                required
+                rows={4}
+                value={newReviewContent}
+                onChange={(e) => setNewReviewContent(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all resize-none"
+                placeholder="Share your experience working with us..."
+              ></textarea>
+            </div>
+            <button 
+              type="submit"
+              className="w-full bg-brand-blue text-white py-3 rounded-md font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+            >
+              <Send className="w-4 h-4" /> Post Review
+            </button>
+          </form>
         </div>
 
         <div className="text-center mt-12">
@@ -125,25 +244,53 @@ export default function Reviews() {
             </div>
             <div className="p-6 overflow-y-auto flex-1 bg-gray-50/50">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {reviews.map((review, index) => (
-                  <div
-                    key={review.id}
-                    className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col h-full"
-                  >
-                    <div className="flex gap-1 mb-4 text-[#F59E0B]">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-current" />
-                      ))}
+                {reviews.map((review, index) => {
+                  if (editingReviewId === review.id) {
+                    return (
+                      <div key={review.id} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col h-full space-y-3">
+                        <input value={editState.name} onChange={(e) => setEditState({ ...editState, name: e.target.value })} className="w-full px-3 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue outline-none text-sm" placeholder="Name" />
+                        <input value={editState.role} onChange={(e) => setEditState({ ...editState, role: e.target.value })} className="w-full px-3 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue outline-none text-sm" placeholder="Location / Designation" />
+                        <textarea value={editState.content} onChange={(e) => setEditState({ ...editState, content: e.target.value })} className="w-full px-3 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue outline-none flex-1 resize-none text-sm" rows={4} placeholder="Review" />
+                        <div className="flex gap-2 justify-end mt-4">
+                          <button onClick={() => setEditingReviewId(null)} className="px-3 py-1.5 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-md transition-colors">Cancel</button>
+                          <button onClick={handleSaveEdit} className="px-3 py-1.5 text-xs bg-brand-blue hover:bg-blue-600 text-white rounded-md transition-colors">Save</button>
+                        </div>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div
+                      key={review.id}
+                      className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col h-full"
+                    >
+                      <div className="flex justify-between items-start mb-4">
+                        <div className="flex gap-1 text-[#F59E0B]">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-current" />
+                          ))}
+                        </div>
+                        {/* @ts-ignore */}
+                        {review.isEditable && (
+                          <div className="flex gap-2">
+                            <button onClick={() => handleEditClick(review)} className="text-gray-400 hover:text-brand-blue transition-colors">
+                              <Edit2 className="w-4 h-4" />
+                            </button>
+                            <button onClick={() => handleDeleteClick(review.id)} className="text-gray-400 hover:text-red-500 transition-colors">
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                      <p className="text-gray-600 mb-6 leading-relaxed italic text-sm flex-1">
+                        "{review.content}"
+                      </p>
+                      <div>
+                        <h4 className="font-bold text-brand-dark text-base">{review.name}</h4>
+                        <p className="text-xs text-gray-500">{review.role}</p>
+                      </div>
                     </div>
-                    <p className="text-gray-600 mb-6 leading-relaxed italic text-sm flex-1">
-                      "{review.content}"
-                    </p>
-                    <div>
-                      <h4 className="font-bold text-brand-dark text-base">{review.name}</h4>
-                      <p className="text-xs text-gray-500">{review.role}</p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
             <div className="p-4 border-t border-gray-100 bg-gray-50 flex justify-end">
