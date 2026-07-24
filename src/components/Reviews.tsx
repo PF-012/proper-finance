@@ -172,56 +172,6 @@ export default function Reviews() {
           })}
         </div>
         
-        {/* Review Submission Form */}
-        <div className="max-w-2xl mx-auto mt-20 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-          <h3 className="text-2xl font-bold text-brand-dark mb-6 font-serif text-center">Share Your Experience</h3>
-          <form onSubmit={handleSubmitReview} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
-                <input 
-                  type="text" 
-                  id="name"
-                  required
-                  value={newReviewName}
-                  onChange={(e) => setNewReviewName(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">Location / Designation</label>
-                <input 
-                  type="text" 
-                  id="role"
-                  value={newReviewRole}
-                  onChange={(e) => setNewReviewRole(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all"
-                  placeholder="e.g. New York or CEO"
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-1">Your Review *</label>
-              <textarea 
-                id="content"
-                required
-                rows={4}
-                value={newReviewContent}
-                onChange={(e) => setNewReviewContent(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-200 rounded-md focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all resize-none"
-                placeholder="Share your experience working with us..."
-              ></textarea>
-            </div>
-            <button 
-              type="submit"
-              className="w-full bg-brand-blue text-white py-3 rounded-md font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
-            >
-              <Send className="w-4 h-4" /> Post Review
-            </button>
-          </form>
-        </div>
-
         <div className="text-center mt-12">
           <button 
             onClick={() => setShowAllReviews(true)}
