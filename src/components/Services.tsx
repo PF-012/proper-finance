@@ -7,7 +7,7 @@ const consultingServices = [
     tag: 'PERSPECTIVE',
     title: 'Equity Research',
     description: 'In-depth analysis of financial statements, market trends, and valuation models to uncover high-potential equity investments.',
-    image: 'https://cdn.invest4edu.com/blog-images/BlogImage_n70fbyh.jpg',
+    image: '/Equity Img.png',
   },
   {
     tag: 'OUR TAKE',
