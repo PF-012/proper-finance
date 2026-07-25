@@ -13,7 +13,7 @@ export default function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-[center_top_20%] md:object-center"
         >
-          <source src="/video1.mp4" type="video/mp4" />
+          <source src="/Video 1.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="absolute inset-0 z-0 pointer-events-none">
