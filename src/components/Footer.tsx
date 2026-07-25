@@ -119,16 +119,16 @@ export default function Footer() {
             </div>
             <div className="p-6 overflow-y-auto flex-1 text-gray-600 space-y-4">
               <h3 className="font-bold text-gray-900 text-lg">1. Information We Collect</h3>
-              <p>We may collect personal information such as your name, email address, phone number, and company details when you use our contact forms, subscribe to our newsletter, or engage our services. We also collect usage data through cookies and similar technologies to improve our website experience.</p>
+              <p>We may collect personal information such as your name, gmail address, phone number, and company details or any valid government document (Aadhar / Passport / Voter ID) any one of these and it should be verified via Digi-locker, when you engage with our services.</p>
               
               <h3 className="font-bold text-gray-900 text-lg">2. How We Use Your Information</h3>
-              <p>The information we collect is used to provide, maintain, and improve our services, communicate with you about your inquiries, send you technical notices and updates, and comply with legal obligations.</p>
+              <p>The information we collect is used to provide, maintain, and improve our services, communicate with you about your inquiries, send you technical notices and updates and comply with legal obligations.</p>
               
               <h3 className="font-bold text-gray-900 text-lg">3. Information Sharing</h3>
               <p>We do not sell your personal information. We may share your information with trusted third-party service providers who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential.</p>
               
               <h3 className="font-bold text-gray-900 text-lg">4. Data Security</h3>
-              <p>We implement appropriate technical and organizational security measures designed to protect your personal information against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or access.</p>
+              <p>We implement appropriate technical and organizational security measures designed to protect your personal information against accidental or unlawful destruction, loss, alteration, unauthorized disclosure or access.</p>
               
               <h3 className="font-bold text-gray-900 text-lg">5. Contact Us</h3>
               <p>If you have any questions about this Privacy Policy, please contact us at techfin01.services@gmail.com.</p>
