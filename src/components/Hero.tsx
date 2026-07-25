@@ -4,14 +4,21 @@ import { ArrowRight } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-[450px] h-[65vh] md:h-screen md:min-h-[800px] flex items-center justify-start overflow-hidden pt-20 md:pt-32">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-[center_top_20%] md:bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop")' }}
-      />
+      {/* Background Video with Overlay */}
+        <div className="absolute inset-0 z-0">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-[center_top_20%] md:object-center"
+        >
+          <source src="/video1.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-black/40 md:bg-black/60 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-brand-dark/95 via-brand-dark/60 md:via-brand-dark/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/20 md:bg-black/30 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/70 via-black/40 md:via-black/30 to-transparent"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -44,4 +51,3 @@ export default function Hero() {
     </section>
   );
 }
-
