@@ -271,11 +271,11 @@ export default function Services() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
           <div className="bg-white rounded-2xl w-full max-w-2xl max-h-[80vh] flex flex-col overflow-hidden text-brand-dark shadow-2xl relative">
             <div className="relative h-64 w-full">
-              <div 
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${consultingServices.find(s => s.title === activeConsultingModal)?.image})` }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 to-transparent"></div>
+                <img 
+                src={consultingServices.find(s => s.title === activeConsultingModal)?.image}
+                alt={activeConsultingModal || 'Service image'}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
               <button onClick={() => setActiveConsultingModal(null)} className="absolute top-4 right-4 p-2 bg-black/20 hover:bg-black/40 text-white rounded-full backdrop-blur-md transition-colors">
                 <X className="h-5 w-5" />
               </button>
