@@ -13,12 +13,12 @@ export default function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-[center_top_20%] md:object-center"
         >
-          <source src="/Video 1.mp4" type="video/mp4" />
+          <source src="/Video.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-black/20 md:bg-black/30 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/70 via-black/40 md:via-black/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/50 via-black/20 to-transparent"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
