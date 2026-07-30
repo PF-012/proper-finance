@@ -134,6 +134,9 @@ export default function Services() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-4 tracking-tight">Services</h2>
+          <p className="text-red-600 font-medium text-base md:text-lg mt-2 border-l-4 border-red-600 pl-4 py-2 bg-red-50 inline-block pr-6 rounded-r-md">
+            Note: We are not SEBI Registered Yet, So Except Equity Research and Investment Advisory service, others are available.
+          </p>
         </div>
 
         {/* Carousel Container */}
