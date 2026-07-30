@@ -161,7 +161,7 @@ export default function Services() {
                 <div 
                   className="absolute inset-0 transition-transform duration-700 group-hover/card:scale-105 will-change-transform transform-gpu"
                 >
-                  <img src={service.image} alt={service.title} loading="lazy" className="w-full h-full object-cover" />
+                 <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover/card:from-black/90 transition-colors duration-500"></div>
 
