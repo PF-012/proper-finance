@@ -13,13 +13,13 @@ const consultingServices = [
     tag: 'OUR TAKE',
     title: 'Corporate Finance',
     description: 'Optimize your capital structure, manage financial risk, and maximize shareholder value through strategic financial planning.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    image: '/corporate.png',
   },
   {
     tag: 'PLATFORM',
     title: 'Strategic Planning',
     description: 'Data-driven insights to define your long-term vision, assess market opportunities, and drive sustainable competitive advantage.',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800',
+    image: '/Stragic.png',
   },
   {
     tag: 'COMPLIANCE',
@@ -37,7 +37,7 @@ const consultingServices = [
     tag: 'INSIGHT',
     title: 'Investment Advisory',
     description: 'Tailored investment strategies designed to build and preserve wealth, leveraging comprehensive market analysis.',
-    image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=800',
+    image: '/inv adv.png',
   },
   {
     tag: 'STRATEGY',
