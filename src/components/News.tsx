@@ -9,7 +9,7 @@ const MOCK_NEWS = [
     title: "How AI is Revolutionizing Corporate Finance",
     category: "Technology",
     date: today,
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600",
+    image: "/CNBC.png",
     excerpt: "Discover the latest trends in how machine learning and artificial intelligence are automating complex financial models.",
     link: "https://www.cnbc.com/technology/"
   },
@@ -18,7 +18,7 @@ const MOCK_NEWS = [
     title: "Global Markets See Shift Amidst New Regulatory Frameworks",
     category: "Markets",
     date: today,
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600",
+    image: "/Reuters.png",
     excerpt: "New compliance standards are forcing financial institutions to rethink their risk management strategies.",
     link: "https://www.reuters.com/markets/"
   },
@@ -27,7 +27,7 @@ const MOCK_NEWS = [
     title: "The Rise of ESG in Investment Advisory",
     category: "Insights",
     date: today,
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=600",
+    image: "/Bloomberg.png",
     excerpt: "Environmental, Social, and Governance criteria are becoming central to equity research and portfolio building.",
     link: "https://www.bloomberg.com/green"
   }
