@@ -45,9 +45,9 @@ export default function News() {
         
         if (data.status === 'ok') {
           const defaultImages = [
-            'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=600',
-            'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=600',
-            'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=600'
+            '/Bloomberg.png',
+            '/Reuters.png',
+            '/CNBC.png'
           ];
           
           const fetchedNews = data.items.slice(0, 3).map((item: any, index: number) => ({
@@ -100,17 +100,12 @@ export default function News() {
               key={`${item.id}-${index}`} 
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col"
             >
-              <div className="relative aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden bg-gray-50 flex items-center justify-center p-6">
                 <img 
                   src={item.image} 
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-dark text-xs font-bold tracking-wider uppercase rounded-full">
-                    {item.category}
-                  </span>
-                </div>
               </div>
               
               <div className="p-6 flex flex-col flex-1">
