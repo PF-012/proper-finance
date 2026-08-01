@@ -96,9 +96,6 @@ export default function Footer() {
             <p className="text-gray-900 font-medium text-sm">
               &copy; {new Date().getFullYear()} Proper Finance Consultancy. All rights reserved.
             </p>
-            <p className="text-gray-500 text-xs">
-              Built by Yuvraj Mondal
-            </p>
           </div>
           <div className="flex space-x-6 text-sm text-gray-900 font-medium">
             <button onClick={() => setShowPrivacy(true)} className="hover:text-brand-blue transition-colors">Privacy Policy</button>
