@@ -4,6 +4,13 @@ import { Star, X, Send, Edit2, Trash2 } from 'lucide-react';
 
 const initialReviews = [
   {
+    id: 0,
+    name: "The Oberoi Group",
+    role: "Chennai, Delhi and Mumbai",
+    content: "He served as an external auditor for The Oberoi Group, demonstrating incredible efficiency by verifying 65,900 fixed assets in just one month. We highly commend his flawless accuracy and outstanding work ethic, which greatly benefited our financial operations.",
+    rating: 5,
+  }
+  {
     id: 1,
     name: "Piyush Kumar Singh",
     role: "Kolkata",
