@@ -43,7 +43,7 @@ export default function About() {
             
             <div className="space-y-6 text-gray-600 text-lg">
               <p>
-                Founded in 2025, Proper Finance is a dynamic financial consulting startup dedicated to helping individuals and businesses navigate the complexities of today's economic landscape. We bring fresh perspectives and actionable, data-driven strategies to foster growth.
+                Founded in 2025, Proper Finance is an independent financial consulting brand dedicated to helping individuals and businesses navigate the complexities of today's economic landscape. Operating as a specialized freelance consultancy, we bring fresh perspectives and actionable, data-driven strategies to foster growth.
               </p>
               <p>
                 Our approach combines deep industry knowledge with rigorous analytical capabilities. We are committed to providing personalized attention and dedicated support to every client, ensuring that your financial goals are met with clarity and confidence.
