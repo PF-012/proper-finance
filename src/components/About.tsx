@@ -2,15 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const logoImage = '/logo.png.jpeg';
-const tridentLogo = '/Trident%20Logo.png';
-const courseraLogo = '/Coursera.png';
-const bcgLogo = '/certifications/bcg.png';
-const mckinseyLogo = '/certifications/mckinsey.png';
-const pwcLogo = '/certifications/pwc.png';
-const oberoiLogo = '/certifications/oberoi.jpg';
-const vedicLogo = '/certifications/vedic.png';
-
 export default function About() {
   const [showMore, setShowMore] = useState(false);
 
@@ -27,7 +18,7 @@ export default function About() {
           >
             <div className="aspect-[4/5] relative max-w-md mx-auto">
               <img 
-                src="/proper-finance-logo.png"  
+                src="/proper-finance-logo.png" 
                 alt="Proper Finance Logo" 
                 className="object-contain w-full h-full shadow-2xl p-8 bg-white border border-gray-100 rounded-lg"
               />
@@ -85,37 +76,15 @@ export default function About() {
               </AnimatePresence>
             </div>
 
-            <div className="mt-12 flex flex-col xl:flex-row gap-8 items-center border-t border-gray-100 pt-10">
-              <div className="xl:w-1/3 shrink-0 text-center xl:text-left">
+            <div className="mt-12 border-t border-gray-100 pt-10">
+              <div className="text-center">
                 <h4 className="text-5xl font-bold text-brand-blue mb-1">20+</h4>
-                <p className="text-gray-500 font-medium text-sm md:text-base leading-snug">Clients<br className="hidden xl:block" /> Served In India</p>
-              </div>
-              <div className="flex flex-col justify-center overflow-hidden relative w-full xl:w-2/3 bg-white rounded-2xl p-6">
-                <p className="text-brand-dark font-semibold mb-6 uppercase tracking-widest text-xs text-center">Certified & Trusted By</p>
-                <div className="w-full relative overflow-hidden">
-                   {/* Marquee wrapper */}
-                   <div className="flex w-max animate-marquee items-center">
-                      {[1, 2].map((set) => (
-                        <div key={set} className="flex gap-12 items-center shrink-0 pr-12">
-                          <img src={bcgLogo} alt="BCG" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
-                          <img src={mckinseyLogo} alt="McKinsey" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
-                          <img src={pwcLogo} alt="PwC" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
-                          <img src={oberoiLogo} alt="The Oberoi Group" className="h-14 md:h-16 w-auto object-contain mix-blend-multiply transition-transform hover:scale-110 shrink-0 max-w-none" />
-                          <img src={vedicLogo} alt="Vedic Yog Peeth" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
-                          <img src={courseraLogo} alt="Coursera" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
-                          <img src={tridentLogo} alt="Trident" className="h-14 md:h-16 w-auto object-contain transition-transform hover:scale-110 shrink-0 max-w-none" />
-                       </div>
-                      ))}
-                   </div>
-                </div>
-                <p className="text-[10px] text-gray-400 mt-4 text-center leading-tight">
-                  * Note: Proper Finance Consultancy is not partnered with or officially affiliated with these companies. We are independently certified by or have worked with some of them.
-                </p>
+                <p className="text-gray-500 font-medium md:text-base leading-snug">Clients Served In India</p>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-    );
+  );
 }
