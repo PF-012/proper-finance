@@ -68,7 +68,7 @@ export default function About() {
                     <div className="bg-blue-50/50 border border-blue-100 rounded-xl p-5 text-base text-gray-700 flex items-start gap-4 mt-2">
                       <span className="text-xl shrink-0 mt-0.5">🌐</span>
                       <p className="leading-relaxed">
-                        As a modern consultancy, we currently operate without a traditional registered office. We provide flexible, high-quality service to our clients on a <strong>remote basis</strong>, directly at <strong>your office location</strong>, or through <strong>scheduled in-person meetings</strong> tailored to your convenience.
+                        As a modern consultancy, We provide flexible, high-quality service to our clients on a <strong>remote basis</strong>, directly at <strong>your office location</strong>, or through <strong>scheduled in-person meetings</strong> tailored to your convenience.
                       </p>
                     </div>
                   </motion.div>
