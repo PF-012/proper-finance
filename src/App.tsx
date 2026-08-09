@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AIImpact from './components/AIImpact';
 import Services from './components/Services';
+import SaaSAdvertisement from './components/SaaSAdvertisement';
 import Donate from './components/Donate';
 import News from './components/News';
 import About from './components/About';
@@ -17,6 +18,7 @@ export default function App() {
         <Hero />
         <AIImpact />
         <Services />
+        <SaaSAdvertisement />
         <News />
         <About />
         <Reviews />
