@@ -12,36 +12,36 @@ export default function Footer() {
   const [showTerms, setShowTerms] = useState(false);
 
   return (
-    <footer id="contact" className="bg-brand-dark text-white pt-20">
+    <footer id="contact" className="bg-white text-black pt-20 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Info */}
           <div className="col-span-1 lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <img src="/proper-finance-logo.png" alt="Proper Finance Logo" className="h-12 w-auto object-contain" />
+              <img src="/proper-finance-logo.png" alt="Proper Finance Logo" className="h-14 w-auto object-contain" />
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            <p className="text-black text-base leading-relaxed mb-6">
               Empowering organizations and individuals with strategic financial insights, risk management, and comprehensive corporate advisory services.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 font-serif tracking-wide">Quick Links</h4>
+            <h4 className="text-xl font-bold mb-6 font-serif tracking-wide text-black">Quick Links</h4>
             <ul className="space-y-4">
-              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors text-sm">Home</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors text-sm">Our Services</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</a></li>
-              <li><a href="#reviews" className="text-gray-400 hover:text-white transition-colors text-sm">Reviews</a></li>
+              <li><a href="#home" className="text-black hover:text-brand-blue transition-colors text-base">Home</a></li>
+              <li><a href="#services" className="text-black hover:text-brand-blue transition-colors text-base">Our Services</a></li>
+              <li><a href="#about" className="text-black hover:text-brand-blue transition-colors text-base">About Us</a></li>
+              <li><a href="#reviews" className="text-black hover:text-brand-blue transition-colors text-base">Reviews</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-6 font-serif tracking-wide">Contact Us</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
+            <h4 className="text-xl font-bold mb-6 font-serif tracking-wide text-black">Contact Us</h4>
+            <ul className="space-y-4 text-base text-black">
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-brand-blue shrink-0" />
+                <MapPin className="h-5 w-5 text-brand-blue shrink-0 mt-0.5" />
                 <span>Address<br/>FD-83/A, Baguiati, Greater Kolkata Area, Pin Code - 700059</span>
               </li>
               <li className="flex items-center gap-3">
@@ -50,20 +50,20 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-brand-blue shrink-0" />
-                <a href="mailto:techfin01.services@gmail.com" className="hover:text-white transition-colors">techfin01.services@gmail.com</a>
+                <a href="mailto:techfin01.services@gmail.com" className="text-black hover:text-brand-blue transition-colors">techfin01.services@gmail.com</a>
               </li>
             </ul>
             
             <div className="mt-8">
-              <h4 className="text-sm font-bold mb-4 font-serif tracking-wide text-gray-300 uppercase">Follow Us</h4>
+              <h4 className="text-base font-bold mb-4 font-serif tracking-wide text-black uppercase">Follow Us</h4>
               <div className="flex items-center gap-4">
-                <a href="https://www.facebook.com/share/1CU5e2Ca4g/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 hover:bg-[#1877F2] transition-colors rounded-full text-[#1877F2] hover:text-white group">
+                <a href="https://www.facebook.com/share/1CU5e2Ca4g/" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-gray-100 hover:bg-[#1877F2] transition-colors rounded-full text-[#1877F2] hover:text-white group border border-gray-200">
                   <Facebook className="h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
-                <a href="https://www.instagram.com/proper_finance_?igsh=MTE0cGc5Z2NjamU5bA==" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 hover:bg-[#E1306C] transition-colors rounded-full text-[#E1306C] hover:text-white group">
+                <a href="https://www.instagram.com/proper_finance_?igsh=MTE0cGc5Z2NjamU5bA==" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-gray-100 hover:bg-[#E1306C] transition-colors rounded-full text-[#E1306C] hover:text-white group border border-gray-200">
                   <Instagram className="h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
-                <a href="https://wa.me/918583090641" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 hover:bg-[#25D366] transition-colors rounded-full text-[#25D366] hover:text-white group">
+                <a href="https://wa.me/918583090641" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-gray-100 hover:bg-[#25D366] transition-colors rounded-full text-[#25D366] hover:text-white group border border-gray-200">
                   <WhatsAppIcon className="h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
               </div>
@@ -72,17 +72,17 @@ export default function Footer() {
 
           {/* Certification / Consultant Info */}
           <div>
-            <h4 className="text-lg font-bold mb-6 font-serif tracking-wide">Connect</h4>
-            <div className="bg-white/5 p-6 border border-white/10 rounded-sm">
-              <p className="text-sm text-gray-300 mb-2">Expert Advisory</p>
-              <p className="text-base font-medium mb-4">Certified by Yuvraj</p>
+            <h4 className="text-xl font-bold mb-6 font-serif tracking-wide text-black">Connect</h4>
+            <div className="bg-gray-50 p-6 border border-gray-200 rounded-lg">
+              <p className="text-base text-black mb-2">Expert Advisory</p>
+              <p className="text-lg font-semibold text-black mb-4">Certified by Yuvraj</p>
               <a 
                 href="https://www.linkedin.com/in/atyourservice-yuvraj" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-[#0077b5] text-white text-sm font-medium hover:bg-[#005e93] transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0077b5] text-white text-base font-medium hover:bg-[#005e93] transition-colors rounded"
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="h-5 w-5" />
                 View Profile
               </a>
             </div>
@@ -90,14 +90,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-white py-6">
+      <div className="border-t border-gray-200 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col items-center md:items-start gap-1">
-            <p className="text-gray-900 font-medium text-sm">
+            <p className="text-black font-medium text-base">
               &copy; {new Date().getFullYear()} Proper Finance Consultancy. All rights reserved.
             </p>
           </div>
-          <div className="flex space-x-6 text-sm text-gray-900 font-medium">
+          <div className="flex space-x-6 text-base text-black font-medium">
             <button onClick={() => setShowPrivacy(true)} className="hover:text-brand-blue transition-colors">Privacy Policy</button>
             <button onClick={() => setShowTerms(true)} className="hover:text-brand-blue transition-colors">Terms of Service</button>
           </div>
@@ -119,13 +119,13 @@ export default function Footer() {
               <p>We may collect personal information such as your name, gmail address, phone number, and company details or any valid government document (Aadhar / Passport / Voter ID) any one of these and it should be verified via Digi-locker, when you engage with our services.</p>
               
               <h3 className="font-bold text-gray-900 text-lg">2. How We Use Your Information</h3>
-              <p>The information we collect is used to provide, maintain, and improve our services, communicate with you about your inquiries, send you technical notices and updates and comply with legal obligations.</p>
+              <p>The information we collect is used to provide, maintain, and improve our services, communicate with you about your inquiries, send you technical notices and updates, and comply with legal obligations.</p>
               
               <h3 className="font-bold text-gray-900 text-lg">3. Information Sharing</h3>
               <p>We do not sell your personal information. We may share your information with trusted third-party service providers who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential.</p>
               
               <h3 className="font-bold text-gray-900 text-lg">4. Data Security</h3>
-              <p>We implement appropriate technical and organizational security measures designed to protect your personal information against accidental or unlawful destruction, loss, alteration, unauthorized disclosure or access.</p>
+              <p>We implement appropriate technical and organizational security measures designed to protect your personal information against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or access.</p>
               
               <h3 className="font-bold text-gray-900 text-lg">5. Contact Us</h3>
               <p>If you have any questions about this Privacy Policy, please contact us at techfin01.services@gmail.com.</p>
