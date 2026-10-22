@@ -6,7 +6,6 @@ import SaaSAdvertisement from './components/SaaSAdvertisement';
 import Donate from './components/Donate';
 import News from './components/News';
 import About from './components/About';
-import Reviews from './components/Reviews';
 import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 
@@ -21,7 +20,6 @@ export default function App() {
         <SaaSAdvertisement />
         <News />
         <About />
-        <Reviews />
         <Donate />
       </main>
       <Footer />
