@@ -6,7 +6,6 @@ const searchIndex = [
   { title: 'Services', type: 'Section', href: '#services' },
   { title: 'News', type: 'Section', href: '#news' },
   { title: 'About Us', type: 'Section', href: '#about' },
-  { title: 'Reviews', type: 'Section', href: '#reviews' },
   { title: 'Contact', type: 'Section', href: '#contact' },
   { title: 'Corporate Finance', type: 'Consulting', href: '#services' },
   { title: 'Strategic Planning', type: 'Consulting', href: '#services' },
@@ -80,7 +79,6 @@ export default function Navbar() {
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'About', href: '#about' },
-    { name: 'Reviews', href: '#reviews' },
     { name: 'Contact', href: '#contact' },
   ];
 
