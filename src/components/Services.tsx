@@ -74,11 +74,9 @@ const specializedFields = [
   {
     title: 'Financial Fields',
     items: [
-      'Research Reports (Sell Side)',
       'Tally Prime',
       'Valuation',
       'Financial Reporting (DCF)',
-      'Equity Research Reports (Buy Side) - Client Specific',
       'Budgeting Quarterly + Annually'
     ]
   },
@@ -88,8 +86,7 @@ const specializedFields = [
       'Portfolio Building (B2C)',
       'Financial Modeler',
       'Fixed Asset Verification',
-      'Financial Statements Reporting (P/L, BS, CF)',
-      'Equity Reports (Major) as mentioned earlier.'
+      'Financial Statements Reporting (P/L, BS, CF)'
     ]
   },
 ];
