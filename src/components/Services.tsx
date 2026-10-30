@@ -24,7 +24,7 @@ const consultingServices = [
   {
     tag: 'STRATEGY',
     title: 'Taxation',
-    description: 'Comprehensive tax planning and accounting solutions to improve cash flow and ensure regulatory compliance.',
+    description: 'Comprehensive tax planning and accounting solutions to improve cash flow and ensure regulatory compliance. ITR and GSTR filings are available through Proper Finance Consultancy or, where required, a dedicated Chartered Accountant (CA) firm. Fees will vary based on the client’s requirements and the service provider.',
     image: 'https://professionaltaxllc.com/wp-content/uploads/2023/08/client-portal.jpg',
   },
   {
