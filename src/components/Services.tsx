@@ -23,8 +23,8 @@ const consultingServices = [
   },
   {
     tag: 'COMPLIANCE',
-    title: 'External Auditing',
-    description: 'Independent examination of financial records to ensure accuracy, transparency, and compliance with statutory regulations.',
+    title: 'Auditing',
+    description: 'Audit assignments are undertaken through Proper Finance under the engagement of a Chartered Accountant (CA) firm.',
     image: 'https://www.tridenthotels.com/-/media/trident-hotel/webstories/best-restaurants-in-south-mumbai/frame-1.jpg',
   },
   {
