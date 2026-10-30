@@ -4,12 +4,6 @@ import { ChevronLeft, ChevronRight, X, ArrowRight } from 'lucide-react';
 
 const consultingServices = [
   {
-    tag: 'PERSPECTIVE',
-    title: 'Equity Research',
-    description: 'In-depth analysis of financial statements, market trends, and valuation models to uncover high-potential equity investments.',
-    image: '/Equity Img.png',
-  },
-  {
     tag: 'OUR TAKE',
     title: 'Corporate Finance',
     description: 'Optimize your capital structure, manage financial risk, and maximize shareholder value through strategic financial planning.',
@@ -34,12 +28,6 @@ const consultingServices = [
     image: 'https://www.hbs.edu/ctfassets/public/images/14yzt4qCTTEOYl6fGqHGzb/risk-management.jpg',
   },
   {
-    tag: 'INSIGHT',
-    title: 'Investment Advisory',
-    description: 'Tailored investment strategies designed to build and preserve wealth, leveraging comprehensive market analysis.',
-    image: '/inv adv.png',
-  },
-  {
     tag: 'STRATEGY',
     title: 'Tax & Accounting Strategy',
     description: 'Comprehensive tax planning and accounting solutions to improve cash flow and ensure regulatory compliance.',
@@ -56,6 +44,18 @@ const consultingServices = [
     title: 'Website Building',
     description: 'Professional, responsive websites tailored to your brand and business goals, from informative business websites to landing pages that create a strong online presence.',
     image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=85',
+  },
+  {
+    tag: 'PERSPECTIVE',
+    title: 'Equity Research',
+    description: 'In-depth analysis of financial statements, market trends, and valuation models to uncover high-potential equity investments.',
+    image: '/Equity Img.png',
+  },
+  {
+    tag: 'INSIGHT',
+    title: 'Investment Advisory',
+    description: 'Tailored investment strategies designed to build and preserve wealth, leveraging comprehensive market analysis.',
+    image: '/inv adv.png',
   },
 ];
 
