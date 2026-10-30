@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className="space-y-4 text-base text-black">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-brand-blue shrink-0 mt-0.5" />
-                <span>Address<br/>FD-83/A, Baguiati, Greater Kolkata Area, Pin Code - 700059</span>
+                <span>Address: FD-83/A, Baguiati, Greater Kolkata Area, PIN - 700059</span>
               </li>
               <li className="flex items-center gap-3">
                 <WhatsAppIcon className="h-5 w-5 text-brand-blue shrink-0" />
