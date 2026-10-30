@@ -45,6 +45,18 @@ const consultingServices = [
     description: 'Comprehensive tax planning and accounting solutions to improve cash flow and ensure regulatory compliance.',
     image: 'https://professionaltaxllc.com/wp-content/uploads/2023/08/client-portal.jpg',
   },
+  {
+    tag: 'CUSTOM SOLUTIONS',
+    title: 'Personalized Software Building',
+    description: 'Custom software solutions designed around your specific business processes, helping simplify day-to-day operations, organize information, and improve productivity.',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85',
+  },
+  {
+    tag: 'DIGITAL PRESENCE',
+    title: 'Website Building',
+    description: 'Professional, responsive websites tailored to your brand and business goals, from informative business websites to landing pages that create a strong online presence.',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=85',
+  },
 ];
 
 const specializedFields = [
